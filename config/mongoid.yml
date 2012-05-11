@@ -1,0 +1,11 @@
+development:
+  host: localhost
+  database: andrew_and_jenny_development
+
+test:
+  host: localhost
+  database: andrew_and_jenny_test
+
+production:
+  host: localhost
+  database: andrew_and_jenny_production
