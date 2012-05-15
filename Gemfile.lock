@@ -1,7 +1,7 @@
 GIT
   remote: git://github.com/nicholashibberd/cms.git
-  revision: 604c31b438a3682aad690b852d764a3ff4fb270c
-  ref: 604c31b438
+  revision: cdcb26662f54e2112913f800a2883915305ea1cb
+  ref: cdcb26662f
   specs:
     cms (0.0.1)
       bson_ext
