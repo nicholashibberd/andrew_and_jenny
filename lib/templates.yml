@@ -1,0 +1,90 @@
+panels:
+  flexi_panel: &flexi_panel
+    max_widgets: -1
+    widget_types:
+      - content
+      - photo
+      - gallery
+      - form
+      - map
+      - events
+
+regions:
+  full_width: &full_width
+    region_type: full_width
+    region_category: main_body
+    panels:
+      - description: full_width
+        width: 900
+        <<: *flexi_panel
+
+  one_third_two_thirds: &one_third_two_thirds
+    region_type: one_third_two_thirds
+    region_category: main_body
+    panels:
+      - description: one_third
+        width: 300
+        <<: *flexi_panel
+      - description: two_thirds
+        width: 600
+        <<: *flexi_panel
+
+  two_thirds_one_third: &two_thirds_one_third
+    region_type: two_thirds_one_third
+    region_category: main_body
+    panels:
+      - description: one_third
+        width: 300
+        <<: *flexi_panel
+      - description: two_thirds
+        width: 600
+        <<: *flexi_panel
+
+  two_halves: &two_halves
+    region_type: two_halves
+    region_category: main_body
+    panels:
+      - description: half
+        width: 450
+        <<: *flexi_panel
+      - description: half
+        width: 450
+        <<: *flexi_panel
+
+  sixty_forty: &sixty_forty
+    region_type: sixty_forty
+    region_category: main_body
+    panels:
+      - description: sixty
+        width: 500
+        <<: *flexi_panel
+      - description: forty
+        width: 400
+        <<: *flexi_panel
+
+  forty_sixty: &forty_sixty
+    region_type: forty_sixty
+    region_category: main_body
+    panels:
+      - description: forty
+        width: 500
+        <<: *flexi_panel
+      - description: sixty
+        width: 400
+        <<: *flexi_panel
+
+templates:
+  template1:
+    layout: layout1
+    regions:
+      - *full_width
+  template2:
+    layout: layout1
+    regions:
+      - *one_third_two_thirds      
+      - *two_thirds_one_third         
+  template3:
+    layout: layout1
+    regions:
+      - *sixty_forty
+      - *forty_sixty

@@ -7,8 +7,23 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+	<div id="wrapper">
+		<div id="inner_wrapper">
+			<div id="header">
+				<div id="branch">
+					<%= image_tag 'branch.gif' %>
+				</div>
+				<div id="logo">
+					<%= image_tag 'logo.gif' %>
+				</div>
+			</div>
+			<div id='top_nav'>
+				<div id="top_nav_inner">
+					<%= render 'layouts/application/top_nav' %>
+				</div>
+			</div>
+			<%= yield %>
+		</div>
+	</div>
 </body>
 </html>

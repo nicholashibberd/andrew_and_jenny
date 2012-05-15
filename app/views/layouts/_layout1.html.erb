@@ -1,0 +1,17 @@
+<div id="main_body">
+	<% @page.regions.by_type('main_body').each do |region| %>
+		<div class="main_body_region <%= region.name %>">
+			<%= render "regions/#{region.region_type}", :region => region %>						
+		</div>
+	
+	<% end %>
+	
+	<% if show_editing_tools? %>
+		<%= form_tag '/cms/pages/add_region' do %>
+			<%= hidden_field_tag 'page_id', @page.id %>
+			<%= text_field_tag 'region' %>
+			<%= submit_tag 'Add region', :class => 'btn btn-success' %>
+		<% end %>
+	<% end %>
+	
+</div> <!-- main_body -->

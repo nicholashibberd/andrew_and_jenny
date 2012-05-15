@@ -1,0 +1,11 @@
+<div id="main_body">
+	<h1>RSVP</h1>
+	<%= form_for @rsvp do |f| -%>
+		<div>
+	  	<%= f.text_field :name %>
+		</div>
+		<div>
+	  	<%= f.submit :submit %>
+		</div>
+	<% end -%>
+</div>
