@@ -17,7 +17,13 @@
 					<td class="reply_name"><%= reply.name %></td>
 					<td class="reply_attending"><%= reply.attending? %></td>
 					<td class="reply_transport"><%= reply.transport.join('<br />').html_safe %></td>
-					<td class="reply_menu_choices"><%= reply.menu_choices.join('<br />').html_safe %></td>
+					<td class="reply_menu_choices">
+						<% unless !reply.attending %>
+							<%= reply.starter %><br />
+							<%= reply.main %><br />
+							<%= reply.dessert %>
+						<% end %>
+					</td>
 					<td class="reply_dietary_requirements"><%= reply.dietary_requirements %></td>
 				</tr>
 			<% end %>

@@ -4,7 +4,9 @@ class Rsvp
   field :name
   field :attending, :type => Boolean
   field :transport, :type => Array, :default => []
-  field :menu_choices, :type => Array, :default => []
+  field :starter
+  field :main
+  field :dessert
   field :dietary_requirements
   
   def as_hash

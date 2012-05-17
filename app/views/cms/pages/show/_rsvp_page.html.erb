@@ -20,19 +20,22 @@
 			<div class="field" id="menu_choice_fields">
 				<h3>Menu choices</h3>
 				<div class="field_group" id="menu_items1">
-		  		<div class="field_item"><%= check_box_tag 'rsvp[menu_choices][]', 'Chicken & Bacon Salad' %> Chicken & Bacon Salad</div>
-			  	<div class="field_item"><%= check_box_tag 'rsvp[menu_choices][]', 'Smoked Trout Terine' %> Smoked Trout Terine</div>
-			  	<div class="field_item"><%= check_box_tag 'rsvp[menu_choices][]', "Grilled Goat's Cheese" %> Grilled Goat's Cheese</div>
+					<h4>Starter</h4>
+		  		<div class="field_item"><%= f.radio_button :starter, 'Chicken & Bacon Salad' %> Chicken & Bacon Salad</div>					
+		  		<div class="field_item"><%= f.radio_button :starter, 'Smoked Trout Terine' %> Smoked Trout Terine</div>					
+		  		<div class="field_item"><%= f.radio_button :starter, "Grilled Goat's Cheese" %> Grilled Goat's Cheese</div>					
 				</div>
 				<div class="field_group" id="menu_items2">
-			  	<div class="field_item"><%= check_box_tag 'rsvp[menu_choices][]', "Rump of Lamb" %> Rump of Lamb</div>
-			  	<div class="field_item"><%= check_box_tag 'rsvp[menu_choices][]', "Pan-Fried Chicken" %> Pan-Fried Chicken</div>
-			  	<div class="field_item"><%= check_box_tag 'rsvp[menu_choices][]', "Asparagus Risotto" %> Asparagus Risotto</div>
+					<h4>Main</h4>
+		  		<div class="field_item"><%= f.radio_button :main, 'Rump of Lamb' %> Rump of Lamb</div>					
+		  		<div class="field_item"><%= f.radio_button :main, 'Pan-Fried Chicken' %> Pan-Fried Chicken</div>					
+		  		<div class="field_item"><%= f.radio_button :main, "Asparagus Risotto" %> Asparagus Risotto</div>					
 				</div>
 				<div class="field_group" id="menu_items3">
-			  	<div class="field_item"><%= check_box_tag 'rsvp[menu_choices][]', "Apple Tart Tatin" %> Apple Tart Tatin</div>
-			  	<div class="field_item"><%= check_box_tag 'rsvp[menu_choices][]', "Raspberry Creme Brulee" %> Raspberry Creme Brulee</div>
-			  	<div class="field_item"><%= check_box_tag 'rsvp[menu_choices][]', "Passion Fruit Tart" %> Passion Fruit Tart</div>
+					<h4>Dessert</h4>
+		  		<div class="field_item"><%= f.radio_button :dessert, 'Apple Tart Tatin' %> Apple Tart Tatin</div>					
+		  		<div class="field_item"><%= f.radio_button :dessert, 'Raspberry Creme Brulee' %> Raspberry Creme Brulee</div>					
+		  		<div class="field_item"><%= f.radio_button :dessert, "Passion Fruit Tart" %> Passion Fruit Tart</div>
 				</div>
 			</div>
 			<div class="field">
