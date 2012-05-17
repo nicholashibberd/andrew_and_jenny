@@ -34,10 +34,10 @@ regions:
     region_category: main_body
     panels:
       - description: one_third
-        width: 300
+        width: 600
         <<: *flexi_panel
       - description: two_thirds
-        width: 600
+        width: 300
         <<: *flexi_panel
 
   two_halves: &two_halves

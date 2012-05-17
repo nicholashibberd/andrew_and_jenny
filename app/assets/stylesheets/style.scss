@@ -81,13 +81,17 @@ body {
 	.sixty { width: 500px; float: left; }
 	.forty { width: 400px; float: left; }
 	.widget { margin-bottom: 30px; }
+	
+	.photo_widget { text-align: center; }
 }
 
 #travel {
-	.full_width_1 { position: relative; }
-	#full_width_1_panel_1 .content_widget {
-		position: absolute;
-		width: 350px;
+	.two_thirds_one_third_1 {
+		.left .content_widget { width: 560px; }
+		.right .photo_widget { margin-top: 50px; }
+	}
+	.sixty_forty {
+		.content_widget { width: 400px; }
 	}
 }
 
