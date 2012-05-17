@@ -2,6 +2,7 @@
 	<div id="rsvp_form">
 		<h1>RSVP</h1>
 		<%= form_for Rsvp.new, :url => '/rsvps' do |f| -%>
+			<%= hidden_field_tag :page_id, @page.id %>
 			<div class="field">
 				<h3>Name</h3>
 		  	<%= f.text_field :name %>
@@ -13,25 +14,25 @@
 			</div>
 			<div class="field">
 				<h3>And would like transport from</h3>
-		  	<div class="field_item"><%= f.check_box :transport_to_church %> from Hartsfield Manor to All Saints Church before the ceremony</div>
-		  	<div class="field_item"><%= f.check_box :transport_to_reception %> from All Saints Church to Hartsfield Manor after the ceremony</div>
+		  	<div class="field_item"><%= check_box_tag 'rsvp[transport][]', 'To Church' %> from Hartsfield Manor to All Saints Church before the ceremony</div>
+		  	<div class="field_item"><%= check_box_tag 'rsvp[transport][]', 'To Reception' %> from All Saints Church to Hartsfield Manor after the ceremony</div>
 			</div>
 			<div class="field" id="menu_choice_fields">
 				<h3>Menu choices</h3>
 				<div class="field_group" id="menu_items1">
-		  		<div class="field_item"><%= check_box_tag 'rsvp[menu_choices][]', 'chicken_and_bacon_salad' %> Chicken & Bacon Salad</div>
-			  	<div class="field_item"><%= check_box_tag 'rsvp[menu_choices][]', 'smoked_trout_terrine' %> Smoked Trout Terine</div>
-			  	<div class="field_item"><%= check_box_tag 'rsvp[menu_choices][]', 'grilled_goats_cheese' %> Grilled Goat's Cheese</div>
+		  		<div class="field_item"><%= check_box_tag 'rsvp[menu_choices][]', 'Chicken & Bacon Salad' %> Chicken & Bacon Salad</div>
+			  	<div class="field_item"><%= check_box_tag 'rsvp[menu_choices][]', 'Smoked Trout Terine' %> Smoked Trout Terine</div>
+			  	<div class="field_item"><%= check_box_tag 'rsvp[menu_choices][]', "Grilled Goat's Cheese" %> Grilled Goat's Cheese</div>
 				</div>
 				<div class="field_group" id="menu_items2">
-			  	<div class="field_item"><%= check_box_tag 'rsvp[menu_choices][]', 'rump_of_lamb' %> Rump of Lamb</div>
-			  	<div class="field_item"><%= check_box_tag 'rsvp[menu_choices][]', 'pan_fried_chicken' %> Pan-Fried Chicken</div>
-			  	<div class="field_item"><%= check_box_tag 'rsvp[menu_choices][]', 'asparagus_risotto' %> Asparagus Risotto</div>
+			  	<div class="field_item"><%= check_box_tag 'rsvp[menu_choices][]', "Rump of Lamb" %> Rump of Lamb</div>
+			  	<div class="field_item"><%= check_box_tag 'rsvp[menu_choices][]', "Pan-Fried Chicken" %> Pan-Fried Chicken</div>
+			  	<div class="field_item"><%= check_box_tag 'rsvp[menu_choices][]', "Asparagus Risotto" %> Asparagus Risotto</div>
 				</div>
 				<div class="field_group" id="menu_items3">
-			  	<div class="field_item"><%= check_box_tag 'rsvp[menu_choices][]', 'apple_tart_tatin' %> Apple Tart Tatin</div>
-			  	<div class="field_item"><%= check_box_tag 'rsvp[menu_choices][]', 'raspberry_creme_brulee' %> Raspberry Creme Brulee</div>
-			  	<div class="field_item"><%= check_box_tag 'rsvp[menu_choices][]', 'passion_fruit_tart' %> Passion Fruit Tart</div>
+			  	<div class="field_item"><%= check_box_tag 'rsvp[menu_choices][]', "Apple Tart Tatin" %> Apple Tart Tatin</div>
+			  	<div class="field_item"><%= check_box_tag 'rsvp[menu_choices][]', "Raspberry Creme Brulee" %> Raspberry Creme Brulee</div>
+			  	<div class="field_item"><%= check_box_tag 'rsvp[menu_choices][]', "Passion Fruit Tart" %> Passion Fruit Tart</div>
 				</div>
 			</div>
 			<div class="field">

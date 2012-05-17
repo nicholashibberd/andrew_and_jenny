@@ -1,0 +1,26 @@
+<div class="page_header">
+	<h1>RSVP replies</h1>
+</div>
+
+<section class="page_content">		
+	<div id="rsvp_replies">
+		<table>
+			<tr>
+				<th>Name</th>
+				<th>Attending?</th>
+				<th>Transport</th>
+				<th>Menu Choices</th>
+				<th>Dietary Requirements</th>
+			</tr>
+			<% @replies.each do |reply| %>
+				<tr>
+					<td class="reply_name"><%= reply.name %></td>
+					<td class="reply_attending"><%= reply.attending? %></td>
+					<td class="reply_transport"><%= reply.transport.join('<br />').html_safe %></td>
+					<td class="reply_menu_choices"><%= reply.menu_choices.join('<br />').html_safe %></td>
+					<td class="reply_dietary_requirements"><%= reply.dietary_requirements %></td>
+				</tr>
+			<% end %>
+		</table>
+	</div>
+</section>

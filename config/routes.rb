@@ -1,7 +1,9 @@
 AndrewAndJenny::Application.routes.draw do
   mount Cms::Engine => "/cms"
-  get 'rsvp', :to => 'rsvps#new'
   resources :rsvps
+  get 'thankyou', :to => 'rsvps#thankyou', :as => :thankyou
+  get 'cms/rsvps', :to => 'cms/rsvps#replies', :as => :rsvp_replies
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

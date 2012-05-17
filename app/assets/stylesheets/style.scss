@@ -113,3 +113,45 @@ RSVP
 	#menu_choice_fields { height: 100px; }
 	.field_group { width: 200px; float: left;}
 }
+
+/****************************************************
+Flash
+*****************************************************/
+
+#flash {
+	margin: 30px 40px -30px;
+}
+
+ul#flash_list {
+  padding-left: 0px;
+  list-style-type: none;
+	margin: 0px;
+}
+
+.flash_item {
+  padding: 10px 60px;
+  color: #fff;
+}
+
+.flash_item.notice {
+  @include gradiented(#990000, #4A0000);
+	color: #fff;
+}
+
+.flash_item.error {
+  @include gradiented(#FD8C8C, #CC0000);	
+}
+
+/****************************************************
+CMS Rsvps
+*****************************************************/
+
+#rsvp_replies {
+	th { background: #eee; }
+	td, th { padding: 10px; text-align: left; border: 1px solid #eee; }
+	
+	td.reply_name { width: 200px; }
+	td.reply_attending { width: 100px; }
+	td.reply_menu_choices { width: 200px; }
+	td.reply_dietary_requirements { width: 250px; }
+}
