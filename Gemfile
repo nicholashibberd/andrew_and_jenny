@@ -2,8 +2,8 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.1.0'
 gem 'mongoid'
-#gem "cms", :git => "git://github.com/nicholashibberd/cms.git", :ref => '5824f4174c'
-gem "cms", :path => "../cms"
+gem "cms", :git => "git://github.com/nicholashibberd/cms.git", :ref => '6dfaf8ae3b'
+#gem "cms", :path => "../cms"
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
