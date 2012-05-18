@@ -90,7 +90,10 @@ body {
 		.left .content_widget { width: 560px; }
 		.right .photo_widget { margin-top: 50px; }
 	}
-	.sixty_forty {
+	.sixty_forty_1 {
+		.content_widget { width: 450px; }
+	}
+	.sixty_forty_2, .sixty_forty_3, .sixty_forty_4 {
 		.content_widget { width: 400px; }
 	}
 }

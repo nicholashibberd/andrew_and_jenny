@@ -1,5 +1,5 @@
 <div id="main_body">
-	<% @page.regions.by_type('main_body').each do |region| %>
+	<% @page.regions.by_category('main_body').each do |region| %>
 		<div class="main_body_region <%= region.name %>">
 			<%= render "regions/#{region.region_type}", :region => region %>						
 		</div>
